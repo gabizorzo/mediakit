@@ -63,6 +63,19 @@ p{margin:0}
 
 .foot{padding:28px 20px;display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center;border-bottom:0}
 .foot .acts{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+/* Desktop: title on the left, coupons in a two-column grid on the right, one screen tall. */
+@media (min-width:860px){
+  body{padding-block:0}
+  .frame{max-width:1120px;display:grid;grid-template-columns:minmax(300px,2fr) 5fr;grid-template-rows:auto 1fr auto;height:100vh;height:100dvh;min-height:600px}
+  .bar{grid-column:1/-1}
+  .hero{grid-column:1;grid-row:2;justify-content:center;border-right:1px solid var(--rule);padding:32px 28px;min-height:0}
+  .foot{grid-column:1;grid-row:3;border-right:1px solid var(--rule)}
+  .list{grid-column:2;grid-row:2/4;display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:1fr;border-bottom:0;min-height:0}
+  .list li{padding:14px 24px;align-content:center;gap:12px}
+  .list li:nth-child(2){border-top:0}
+  .list li:nth-child(even){border-left:1px solid var(--rule)}
+  h1{font-size:clamp(44px,5vw,64px)}
+}
 </style>
 </head>
 <body>
