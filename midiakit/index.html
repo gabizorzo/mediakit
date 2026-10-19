@@ -102,6 +102,8 @@ p{margin:0}
 .rows{margin:0;padding:0;list-style:none}
 .rows li{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:12px 32px;align-items:baseline;padding:22px clamp(20px,5vw,64px);border-top:1px solid var(--rule)}
 .rows p{color:var(--soft);max-width:52ch}
+.stack{display:flex;flex-direction:column;justify-content:center;min-width:0}
+.split .rows li{grid-template-columns:1fr;gap:6px}
 
 /* featured posts */
 .posts{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border-top:1px solid var(--rule)}
@@ -226,7 +228,8 @@ p{margin:0}
     <figure><img src="/img/sofa.jpg" alt="Gabi em um sofá azul, de vestido preto, com um drink na mão" style="object-position:50% 42%"></figure>
   </section>
 
-  <section id="conteudo">
+  <section class="split" id="conteudo">
+    <div class="stack">
     <div class="head">
       <h2>O que eu <em>crio</em></h2>
       <span class="label soft">Conteúdo</span>
@@ -236,6 +239,8 @@ p{margin:0}
       <li><h3><em>CrossFit e Hyrox</em></h3><p>Treinos, boxes e a experiência de treinar em lugares diferentes.</p></li>
       <li><h3>Viagem e lifestyle</h3><p>Rotina saudável fora de casa, escolhas de moda esportiva e achados do dia a dia.</p></li>
     </ul>
+    </div>
+    <figure><img src="/img/pista.jpg" alt="Gabi sorrindo na pista de atletismo, de top e short pretos" style="object-position:50% 38%"></figure>
   </section>
 
   <section>
